@@ -3,5 +3,7 @@ console.log('Number of categories:', categories.length);
 
 const categoriesTitle = [];
 categories.forEach(el => {
-    categories.push('Category: ${document.querySelector('.item h2').textContent}')
+    categoriesTitle.push(`Category: ${el.querySelector("h2").textContent} Element:${el.querySelectorAll('ul > li').length}`);
 });
+
+console.log(...categoriesTitle);
